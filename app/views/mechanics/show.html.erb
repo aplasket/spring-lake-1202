@@ -9,7 +9,7 @@
 </div>
 
 <h3>Add a ride to Workload:</h3>
-<%= form_with url: "/mechanics/#{@mechanic.id}/ride_mechanics", method: :post, local: true do |f| %>
+<%= form_with url: "/mechanics/#{@mechanic.id}/rides", method: :post, local: true do |f| %>
   <%= f.label :ride_id, "Ride Id:" %>
   <%= f.text_field :ride_id %>
   <%= f.submit "Submit" %>

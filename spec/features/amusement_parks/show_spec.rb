@@ -37,8 +37,8 @@ RSpec.describe "/amusement_parks/:id, amusement_parks show page" do
       expect(page).to have_content("Mechanics Currently Working on Rides:")
 
       within "#mechanics-#{@universal.id}" do
-        expect(page).to have_content(@kara.name)
-        expect(page).to have_content(@bob.name)
+        expect(page).to have_content(@kara.name, count: 1)
+        expect(page).to have_content(@bob.name, count: 1) #or expect(page).to have_content(@bob.name).once
         expect(page).to_not have_content(@suzie.name)
       end
     end
